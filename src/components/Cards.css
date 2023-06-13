@@ -1,0 +1,6 @@
+.cards_container {
+  display: flex;
+  padding: 15px;
+  border: 8px solid rgba(255, 255, 255, 0.123)
+}
+
