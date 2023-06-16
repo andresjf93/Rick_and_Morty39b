@@ -1,6 +1,10 @@
 .cards_container {
   display: flex;
-  padding: 15px;
-  border: 8px solid rgba(255, 255, 255, 0.123)
+  padding: 21px;
+  border: 21px solid rgba(255, 255, 255, 0.123);
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-around;
+  font-family: Get Schwifty;
 }
-

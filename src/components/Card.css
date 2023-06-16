@@ -1,7 +1,19 @@
 .card{
     border: 8px solid rgba(0, 0, 0, 0.877);
     width: 22%;
+    background-color: rgba(0, 176, 200, 3.032);
+    font-family: 'Get Schwifty', Arial, sans-serif;
+    color: green;
 }
 img{
     width: 100%;
 }
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\get_schwifty.ttf') format('woff2'),
+         url('C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\get_schwifty.ttf') format('woff');
+  }
+  
+   
+ 
+  

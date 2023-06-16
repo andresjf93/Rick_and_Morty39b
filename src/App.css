@@ -1,3 +1,19 @@
 .App {
   text-align: center;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/19643055883023.5996f8afa3a8f.gif);
+  height: 200%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;  
+  
+
+  font-family: 'shlop rg', Arial, sans-serif;
+ 
+  @font-face {
+      font-family: 'shlop rg';
+      src: url('C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\shlop rg.ttf') format('woff2'),
+           url('C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\shlop rg.ttf') format('woff');
+}
 }
