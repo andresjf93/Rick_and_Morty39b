@@ -7,13 +7,11 @@
   background-position: center center;
   width: 100%;
   height: 100vh;  
-  
 
-  font-family: 'shlop rg', Arial, sans-serif;
- 
-  @font-face {
-      font-family: 'shlop rg';
-      src: url('C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\shlop rg.ttf') format('woff2'),
-           url('C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\shlop rg.ttf') format('woff');
-}
-}
+  }
+  .login {
+    background-image: url("C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\login.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  
