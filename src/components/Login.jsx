@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Login.css";
+import "../styles/Login.css";
+import imagenlogin from "../Fonts/logins.jpg";
 
 const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const regexPassword =
-  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  /^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[a-z\d@$!%*?&]{8,16}$/;
 
 export default function Login({ login }) {
   const [inputs, setInputs] = useState({
@@ -54,36 +55,54 @@ export default function Login({ login }) {
         email: "",
         password: "",
       });
-      login(inputs)
+      login(inputs);
       return alert("okkkkk");
     }
     return alert("error");
   }
   return (
-    <div className="titulo">
-      <form onSubmit={handleonSubmit}>
-        <label>Email: </label>
-        <input
-          name="email"
-          value={inputs.email}
-          placeholder="email"
-          onChange={handleChange}
-        ></input>
-        <p className="danger">{errors.email}</p>
-        <label>Password: </label>
-        <input
-          name="password"
-          value={inputs.password}
-          placeholder="password"
-          onChange={handleChange}
-        ></input>
-        <p className="danger">{errors.password}</p>
-        {Object.keys(errors).length === 0 ? (
-          <Link to="/home">
-            <button type="sudmit">Ingresar</button>
-          </Link>
-        ) : null}
-      </form>
+    <div className="login-windows">
+      <div className="login-container">
+        <div className="imagen-container">
+          <img 
+          className="imagen-login"
+          src={imagenlogin} alt="INICIO" />
+        </div>
+        <div className="datos-container">
+          <div className="titulo">
+            <form onSubmit={handleonSubmit}>
+              <label>Email: </label>
+              <input
+                name="email"
+                value={inputs.email}
+                placeholder="email"
+                onChange={handleChange}
+              ></input>
+              <p className="danger">{errors.email}</p>
+              <label>Password: </label>
+              <input
+                type="password"
+                name="password"
+                value={inputs.password}
+                placeholder="password"
+                onChange={handleChange}
+              ></input>
+              <p className="danger">{errors.password}</p>
+              {Object.keys(errors).length === 0 ? (
+                <Link to="/home">
+                  <button 
+                  className="on-button"
+                  type="sudmit">Ingresar</button>
+                </Link>
+              ) : <button 
+              className="off-button"
+              type="submit" disabled>
+              Ingresar
+            </button>}
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

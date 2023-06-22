@@ -1,0 +1,62 @@
+.titulo {
+  font-family: "shlop rg", Arial, sans-serif;
+  font-size: 40px;
+  color: white; /* Forzar heredar el color de letra del elemento padre */
+}
+
+@font-face {
+  font-family: "shlop rg";
+  src: url("C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\shlop rg.ttf")
+      format("woff2"),
+    url("C:\Users\USUARIO\OneDrive\Desktop\RICK AND MORTY\rick_and_morty\src\Fonts\shlop rg.ttf")
+      format("woff");
+}
+.login-windows {
+  width: 400px; /* Ancho del cuadro de inicio de sesión */
+  height: 500px; /* Altura del cuadro de inicio de sesión */
+  margin: auto; /* Centra el cuadro horizontalmente en la página */
+  padding: 20px; /* Espacio interno del cuadro */
+  border-radius: 10px;
+  background-color: #49bbcf; /* Color de fondo del cuadro */
+}
+img-login {
+  padding: 0px;
+  margin: 20px;
+  height: 164px;
+  width: 155px;
+  border-radius: 50%;
+}
+form {
+  display: flex;
+  margin-top: 0em;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+form > * {
+  margin-bottom: 0.0em;
+}
+.on-button:hover {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  padding: 15px 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.off-button{
+  background-color: #e7e7e7; color: black;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
