@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import Detail from "./components/Detail";
 import About from "./components/About";
+import Favorites from "./components/Favorites";
 
 function App() {
   const navigate = useNavigate();
@@ -63,8 +64,9 @@ function App() {
         <Route
           path="/home"
           element={<Cards onClose={onClose} characters={characters} />}
-        ></Route>
+        ></Route>     
         <Route path="/about" element={<About />}></Route>
+        <Route path="/favorites" element={<Favorites onClose={onClose} />}></Route>
         <Route path="/detail/:id" element={<Detail />}></Route>
       </Routes>
     </div>

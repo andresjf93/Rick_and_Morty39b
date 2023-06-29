@@ -11,6 +11,11 @@ export default function NavBar({ onSearch, logout }) {
           <button className="button-home">Home</button>
         </Link>
       </div>
+      <div className="fav">
+        <Link to="favorites">
+          <button className="favorites">Favorites</button>
+        </Link> 
+      </div>
       <div className="nav">
         <Link to="/about">
           <button className="button-about">About</button>

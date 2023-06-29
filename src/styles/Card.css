@@ -10,6 +10,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: stretch;
+  
 }
 .card:active{
   background-color: #3e8e41;
@@ -49,6 +50,7 @@ h3{
     border-bottom-left-radius: 13px;
     border-bottom-right-radius: 16px;
     color: white;
+    
 
   }
   
