@@ -1,42 +1,42 @@
 import "../styles/Card.css";
 import { Link } from "react-router-dom";
-import { connect, useDispatch } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 import { addFav, removeFav } from "../Redux/actions/actions";
 import { useEffect, useState } from "react";
 
-function Card(props) {
-  const {
-    id,
-    name,
-    image,
-    species,
-    gender,
-    onClose,
-    addFav,
-    removeFav,
-    myFavorites
-  } = props;
-  // const dispatch = useDispatch();
+export default function Card(props) {
+  const { id, name, image, species, gender, onClose } = props;
+
+  const [aux, setAux] = useState(false);
+
+  const dispatch = useDispatch();
   //dispatch(addFav({}));
 
   const [isFav, setIsFav] = useState(false);
+  const { myFavorites } = useSelector((s) => s);
 
   function handleFavorite() {
     if (isFav) {
       setIsFav(false);
-      removeFav(id);
+      dispatch(removeFav(id));
     } else {
       setIsFav(true);
-      addFav(props);
+      dispatch(addFav(props));
     }
+    setAux(!aux);
   }
   useEffect(() => {
-          myFavorites.forEach((fav) => {
-        if (fav.id === props.id) {
-          setIsFav(true);
-        }
-      });
-    }, [myFavorites]);
+    myFavorites.forEach((fav) => {
+      if (fav.id === props.id) {
+        setIsFav(true);
+      }
+    });
+  }, [myFavorites]);
+
+  function superClouse() {
+    onClose(id);
+    dispatch(removeFav(id));
+  }
 
   return (
     <div className="card">
@@ -45,7 +45,7 @@ function Card(props) {
       ) : (
         <button onClick={handleFavorite}>🤍</button>
       )}
-      <button className="button-close" onClick={() => onClose(id)}>
+      <button className="button-close" onClick={superClouse}>
         X
       </button>
       <Link to={`/detail/${id}`}>
@@ -64,7 +64,7 @@ function Card(props) {
   );
 }
 
-function mapStateToProps(state) {
+/*function mapStateToProps(state) {
   return {
     myFavorites: state.myFavorites,
   };
@@ -78,3 +78,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
+*/
